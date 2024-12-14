@@ -1,14 +1,5 @@
-def add(x,y):
-    return x+y
+from math_operations import add, subtract, multiply, divide
 
-def mul(x,y):
-    return x*y
-
-def divide(x,y):
-    return x/y
-
-def subtract(x,y):
-    return x-y
 
 def ask_user(): 
     choice = float(input("""
