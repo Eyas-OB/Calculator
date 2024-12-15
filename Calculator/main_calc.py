@@ -6,15 +6,26 @@ from User_input import doMath, getOpperation, getFirstNumber, getNextNumber
 # when they keep putting in numbers then the result will be printed where they will be 
 # prompted to keep putting the result in 
 
-
-firstNumber = getFirstNumber()
+fNum = getFirstNumber()
 
 while(True):
-    #get the opperation that they wish to perform 
     opperation = getOpperation()
-    nextNum = getNextNumber()
-    result = doMath(opperation,firstNumber,nextNum)
+    sNum = getNextNumber()
+    result = doMath(opperation,fNum,sNum)
     print(result)
-    going = input("more math? say no to stop")
-    if(going == no):
+    go = input("do you want to keep doing math? press n to stop")
+    if(go != "n"):
+        while(True):
+            opperation = getOpperation()
+            sNum = getNextNumber()
+            result = doMath(opperation,result,sNum)
+            print(result) 
+            go = input("do you want to keep doing math? press n to stop")
+            if(go == "n"):
+                break
+                print(result)
+    if(go == "n"):
         break
+        print(result)
+    
+
