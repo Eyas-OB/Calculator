@@ -16,6 +16,22 @@
 #lets ask the user what the want to do 
 from math_operations import add,subtract,multiply,divide
 
+def math(opperation):
+    if(opperation == 1): 
+        return add(number_user_picked,Second_picked_number)
+
+#if the user wants to subtract
+    if(opperation == 2):
+        return subtract(number_user_picked,Second_picked_number)
+
+#for multply
+    if(opperation == 3):
+        return multiply(number_user_picked,Second_picked_number)
+
+#for divide
+    if(opperation == 4):
+        return divide(number_user_picked,Second_picked_number)
+
 number_user_picked = float(input("pick your first number: "))
 
 # now we want the user to pick the next number to do the opperation on 
@@ -23,6 +39,8 @@ number_user_picked = float(input("pick your first number: "))
 #later 
 
 num_opperations = 4
+
+
 
 opperation = float(input("""
 What would you like to do?
@@ -53,21 +71,9 @@ Second_picked_number = float(input("pick another number"))
 
 #now that the user picked 2 numbers they can do a calculation 
 
-#if the user picked to add
-if(opperation == 1): 
-    result = add(number_user_picked,Second_picked_number)
+result = math(opperation)
 
-#if the user wants to subtract
-if(opperation == 2):
-    result = subtract(number_user_picked,Second_picked_number)
+print(result)
 
-#for multply
-if(opperation == 3):
-    result = multiply(number_user_picked,Second_picked_number)
-
-#for divide
-if(opperation == 4):
-    result = divide(number_user_picked,Second_picked_number)
-
-
-
+#so now we can store the math opperation in a function but we should try to get the user input and store
+#that in a function 
