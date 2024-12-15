@@ -1,41 +1,20 @@
 from math_operations import add, subtract, multiply, divide
+from User_input import doMath, getOpperation, getFirstNumber, getNextNumber
+
+# we want to prompt for the users input consistantly 
+# while prompting for the user input we want them to keep putting in numbers
+# when they keep putting in numbers then the result will be printed where they will be 
+# prompted to keep putting the result in 
 
 
-def ask_user(): 
-    choice = float(input("""
-    welcome to my calculator what would you like to do?
-    1 for add 
-    2 for multiply 
-    3 for divide 
-    4 for subtract 
-    """))  
-    return choice
+firstNumber = getFirstNumber()
 
-value = ask_user()
-
-while(value <= 0 or value >= 5):
-    if(value <= 0 or value >= 5):
-        print("value was not 1-4 try again")
-    value = ask_user()
-
-
-first_number = float(input("pick your first number "))
-Second_number = float(input("pick your second number "))
-
-
-
-if(value == 1):
-   result = add(first_number,Second_number)
-
-if(value == 2):
-    result = mul(first_number,Second_number)
-
-if(value == 3):
-    result = divide(first_number,Second_number)
-
-if(value == 4):
-    result = subtract(first_number,Second_number)
-
-
-print(result)
-
+while(True):
+    #get the opperation that they wish to perform 
+    opperation = getOpperation()
+    nextNum = getNextNumber()
+    result = doMath(opperation,firstNumber,nextNum)
+    print(result)
+    going = input("more math? say no to stop")
+    if(going == no):
+        break
