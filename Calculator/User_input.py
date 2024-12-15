@@ -30,10 +30,27 @@ def getOpperation():
         4: / 
         """))
         if(not(opperation > 0 and opperation <= num_opperations)):
-            print("this number is out of range")
+            print("\t",opperation,"is is out of range")
         else:
             return opperation
-    
+
+def getSign(x):
+    if(x == 1): 
+        return "+"
+
+ # subtracting
+    if(x == 2):
+        return "-"
+
+#for multply
+    if(x == 3):
+        return "*"
+
+#for divide
+    if(x == 4):
+        return "/"
+
+
 def getFirstNumber():
     first = float(input("enter your first number: "))
     return first
