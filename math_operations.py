@@ -7,7 +7,7 @@ def multiply(x,y):
 
 def divide(x,y):
     
-    if(x == 0 or y == 0):
+    if(y == 0):
         return print("cant divide by 0")
     
     else:       
