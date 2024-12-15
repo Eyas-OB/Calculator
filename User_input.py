@@ -39,23 +39,12 @@ number_user_picked = float(input("pick your first number: "))
 #later 
 
 num_opperations = 4
-
-
-
-opperation = float(input("""
-What would you like to do?
-1: for add
-2: for subtract
-3: for multpuly 
-4: for divide 
-"""))
-
 #they need to pick somthing larger than 0
 #and less than or eaqual to the number of opperations 
-while(not(opperation > 0 and opperation <= num_opperations)):
-    opperation = float(input("""
-    That is not a valid number please try again 
 
+#while true will keep going forever until we tell it to break
+while(True):
+    opperation = float(input("""
     What would you like to do? 
     1: for add
     2: for subtract
@@ -63,6 +52,12 @@ while(not(opperation > 0 and opperation <= num_opperations)):
     4: for divide 
     """))
 
+    #we want to break the loop when a user picks a number between 1 and 4
+    if(not(opperation > 0 and opperation <= num_opperations)):
+        print("this number is out of range")
+    else:
+        break
+    
 #if the user picks somthing that actually exists then we want them to be able to change some numbers
 # for example if they picked a number and then they picked an opperation lets have them pick another 
 # number 
@@ -77,3 +72,4 @@ print(result)
 
 #so now we can store the math opperation in a function but we should try to get the user input and store
 #that in a function 
+
