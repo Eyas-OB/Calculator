@@ -25,8 +25,11 @@ while(True):
     go = input("do you want to keep doing math? y/n ")
     if(go != "n"):
         while(True):
+            print(result)
             #they can do another opperation 
             opperation = getOpperation()
+            #print the next opperation
+            print(result,getSign(opperation))
             #they can pick the next number that they want to use in the result
             sNum = getNextNumber()
             #do the math with the result and the next number 

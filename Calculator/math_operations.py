@@ -8,8 +8,7 @@ def multiply(x,y):
 def divide(x,y):
     
     if(y == 0):
-        return print("cant divide by 0")
-    
+        raise Exception("cant divide by 0")
     else:       
         return x/y
 
