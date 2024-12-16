@@ -13,6 +13,8 @@ fNum = getFirstNumber()
 while(True):
     #get the opperation that the user wants to perform ex -> 2 + 
     opperation = getOpperation()
+    # print what the user is seeing
+    print(fNum,getSign(opperation))
     #gets the next number that they want tho use in the opperation ex -> 2 + 2
     sNum = getNextNumber()
     #evaluates the opperation ex -> 2+2 = 4
@@ -30,7 +32,7 @@ while(True):
             #do the math with the result and the next number 
             result = doMath(opperation,result,sNum)
             #then the next result will be printed 
-            print("result")
+            print(result,getSign(opperation))
             #the user will be asked if they want to keep going 
             go = input("do you want to keep doing math? press n to stop")
             if(go == "n"):
