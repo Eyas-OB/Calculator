@@ -37,7 +37,7 @@ while(True):
             #then the next result will be printed 
             print(result,getSign(opperation))
             #the user will be asked if they want to keep going 
-            go = input("do you want to keep doing math? press n to stop")
+            go = input("do you want to keep doing math? press n to stop ")
             if(go == "n"):
                 break
                 print(result)
