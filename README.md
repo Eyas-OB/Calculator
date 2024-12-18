@@ -1,4 +1,6 @@
 # Calculator
-Making a simple calculator to get a better understanding of python and using github in the same project 
+Making a simple calculator to get a better understanding of python, vs code and git all in the same project.
+
+I belive that project based learning is the most fun and effective way to learn programming
 
 YT videos coming soon! 
