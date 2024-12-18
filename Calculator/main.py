@@ -1,12 +1,22 @@
 from math_operations import add, subtract, multiply, divide
 from User_input import doMath, getOpperation, getFirstNumber, getNextNumber, getSign
 
-#get the first number 
-
-#get first num from user
+#get first number
 fNum = getFirstNumber()
-#get the opperation that they want to do
-opp = getOpperation()
-#print the opperation that they did
-print(fNum,getSign(opp))
+print(fNum)
+
+while(True):
+    opp = getOpperation()
+    print(fNum,getSign(opp))
+
+    #get next number 
+    sNum = getNextNumber()
+    print(fNum,getSign(opp),sNum)
+
+    #do the math
+    result = doMath(opp,fNum,sNum)
+
+    print(fNum,getSign(opp),sNum, " = ", result)
+
+
 
