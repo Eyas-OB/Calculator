@@ -5,18 +5,27 @@ from User_input import doMath, getOpperation, getFirstNumber, getNextNumber, get
 fNum = getFirstNumber()
 print(fNum)
 
-while(True):
+opp = getOpperation()
+print(fNum,getSign(opp))
+
+#get next number 
+sNum = getNextNumber()
+print(fNum,getSign(opp),sNum)
+
+#do the math
+result = doMath(opp,fNum,sNum)
+
+print(fNum,getSign(opp),sNum, " = ", result)
+
+while(True): 
+    print(result)
     opp = getOpperation()
-    print(fNum,getSign(opp))
+    print(result,getSign(opp))
+    nxtNum = getNextNumber()
+    result = doMath(opp,result,nxtNum)
 
-    #get next number 
-    sNum = getNextNumber()
-    print(fNum,getSign(opp),sNum)
+    print(result,getSign(opp),nxtNum, " = ", result)
 
-    #do the math
-    result = doMath(opp,fNum,sNum)
-
-    print(fNum,getSign(opp),sNum, " = ", result)
 
 
 
