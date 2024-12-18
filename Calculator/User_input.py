@@ -22,8 +22,7 @@ num_opperations = 4
 
 def getOpperation():
     while(True):
-        opperation = float(input("""
-        What would you like to do? 
+        opperation = float(input("""What would you like to do? 
         1: +
         2: -
         3: * 
@@ -35,20 +34,14 @@ def getOpperation():
             return opperation
 
 def getSign(x):
-    if(x == 1): 
-        return "+"
-
- # subtracting
-    if(x == 2):
-        return "-"
-
-#for multply
-    if(x == 3):
-        return "*"
-
-#for divide
-    if(x == 4):
-        return "/"
+    signs = {  
+        1 : "+",
+        2 : "-",
+        3 : "*",
+        4: "/"
+    }
+    return signs.get(x)
+        
 
 
 def getFirstNumber():
