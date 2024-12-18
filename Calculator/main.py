@@ -17,14 +17,17 @@ result = doMath(opp,fNum,sNum)
 
 print(fNum,getSign(opp),sNum, " = ", result)
 
-while(True): 
-    print(result)
-    opp = getOpperation()
-    print(result,getSign(opp))
-    nxtNum = getNextNumber()
-    result = doMath(opp,result,nxtNum)
+go = input("another number? say no to stop")
 
-    print(result,getSign(opp),nxtNum, " = ", result)
+if(go != "n"):
+    while(True): 
+        oldResult = result
+        print(oldResult)
+        opp = getOpperation()
+        print(result,getSign(opp))
+        nxtNum = getNextNumber()
+        result = doMath(opp,result,nxtNum)
+        print(oldResult,getSign(opp),nxtNum, " = ", result)
 
 
 
