@@ -3,10 +3,10 @@ from User_input import doMath, getOpperation, getFirstNumber, getNextNumber, get
 
 #get first number
 fNum = getFirstNumber()
-print(fNum)
+print("\n",fNum)
 
 opp = getOpperation()
-
+print("\n",fNum,getSign(opp))
 #get next number 
 sNum = getNextNumber()
 
