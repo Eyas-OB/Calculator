@@ -20,12 +20,12 @@ go = input("use -1 to stop or hit any key to continue ")
 if(go != "-1"):
     while(True): 
         oldResult = result
-        print(oldResult)
+        print("\n",oldResult)
         opp = getOpperation()
-        print(result,getSign(opp))
+        print("\n",result,getSign(opp))
         nxtNum = getNextNumber()
         result = doMath(opp,result,nxtNum)
-        print(oldResult,getSign(opp),nxtNum, " = ", result)
+        print(oldResult,getSign("\n",opp),nxtNum, " = ", result)
         go2 = input("use -1 to stop or hit any key to continue")
         if(go2 == "-1"):
             break
