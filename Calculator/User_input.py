@@ -22,18 +22,28 @@ num_opperations = 4
 
 def getOpperation():
     while(True):
-        opperation = float(input("""
-        What would you like to do? 
+        opperation = float(input("""What would you like to do? 
         1: +
         2: -
         3: * 
         4: / 
         """))
         if(not(opperation > 0 and opperation <= num_opperations)):
-            print("this number is out of range")
+            print("\t",opperation,"is is out of range")
         else:
             return opperation
-    
+
+def getSign(x):
+    signs = {  
+        1 : "+",
+        2 : "-",
+        3 : "*",
+        4: "/"
+    }
+    return signs.get(x)
+        
+
+
 def getFirstNumber():
     first = float(input("enter your first number: "))
     return first
