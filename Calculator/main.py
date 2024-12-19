@@ -15,7 +15,7 @@ result = doMath(opp,fNum,sNum)
 
 print(fNum,getSign(opp),sNum, " = ", result)
 
-go = input("use -1 to stop or hit any key to continue")
+go = input("use -1 to stop or hit any key to continue ")
 
 if(go != "-1"):
     while(True): 
