@@ -17,8 +17,6 @@ print(fNum,getSign(opp),sNum, " = ", result)
 
 go = input("use -1 to stop or hit any key to continue ")
 
-def fart():
-    print("Fart")
 
 if(go != "-1"):
     while(True): 
@@ -30,8 +28,5 @@ if(go != "-1"):
         result = doMath(opp,result,nxtNum)
         print(oldResult,getSign(opp),nxtNum, " = ", result)
         go2 = input("use -1 to stop or hit any key to continue")
-        fart()
-        fart()
-        fart()
         if(go2 == "-1"):
             break
