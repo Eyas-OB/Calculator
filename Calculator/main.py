@@ -18,7 +18,7 @@ print(fNum,getSign(opp),sNum, " = ", result)
 go = input("use -1 to stop or hit any key to continue ")
 
 
-if(go != "-1"):
+if(go != "stop"):
     while(True): 
         oldResult = result
         print(oldResult)
@@ -27,6 +27,8 @@ if(go != "-1"):
         nxtNum = getNextNumber()
         result = doMath(opp,result,nxtNum)
         print(oldResult,getSign(opp),nxtNum, " = ", result)
-        go2 = input("use -1 to stop or hit any key to continue")
-        if(go2 == "-1"):
+        go2 = input("use ""stop"" to stop or hit any key to continue")
+        if(go2 == "stop"):
             break
+
+print("Goodbye")
